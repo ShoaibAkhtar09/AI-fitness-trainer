@@ -754,10 +754,3 @@ def camera2(request): #Excerise: 1. Bicep_curl
 
                                     cv2.putText(image, 'Please Stop Workout!!!', (60,150), 
                                     cv2.FONT_HERSHEY_SIMPLEX, 1.3, (0, 0, 255), 1, cv2.LINE_AA)
-
-                        # Render detections
-                        mp_drawing.draw_landmarks(image, results.pose_landmarks, mp_pose.POSE_CONNECTIONS,
-                                                mp_drawing.DrawingSpec(color=(245,117,66), thickness=2, circle_radius=2), 
-                                                mp_drawing.DrawingSpec(color=(245,66,230), thickness=2, circle_radius=2) 
-                                                )            
-                
