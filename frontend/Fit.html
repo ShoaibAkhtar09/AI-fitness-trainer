@@ -1,0 +1,149 @@
+
+<html>
+    <head>
+        {% load static %}
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static '/img/apple-touch-icon.png' %}">
+
+  <link rel="manifest" href="{% static '/img/site.webmanifest' %}">
+        <title>FitMe</title>
+
+    <style>
+
+  body {
+    color: black;
+    overflow: hidden;
+    height:100%;
+    background-image:url("{% static '/img/12.jpg' %}");
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-size: cover;
+    backgroud-attachment:fixed;
+    width:100%;
+    background-repeat:no-repeat;
+    margin:0;
+    padding:0;
+}
+form {
+    opacity:0.9;
+    background-color: grey;
+    color: black;
+    border-radius: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 140px 510px;
+    height:400px;
+    box-shadow: 2px 2px 20px 5px black;
+    padding: 10px;
+    width:100%;
+    max-width: 400px;
+}
+input {
+    border:0px;
+    width: 100%;
+    text-align: center;
+}
+#height
+{
+width:100%;
+margin-left:1px;
+}
+#weight
+{
+margin-left:1px;
+width:100%;
+}
+
+.submit {
+    display:inline-block;
+    color: white;
+    background-color: blue;
+    margin-left:1px;
+    padding: 5px;
+    border: 0;
+    font-weight: bold;
+    width:380px;
+}
+.submit:hover {
+
+    background-color: lightblue;
+    color:white;
+
+
+}
+#heightunits
+{
+width:121px;
+}
+
+#result {
+    border: 1px solid blue;
+    padding: 2px;
+margin-left:1px;
+    color: black;
+    width: 376px;
+    text-align: center;
+     font-weight: bold;
+}
+#bb{
+border:1px solid black;
+padding:2px;
+color:black;
+margin-left:1px;
+width:376px;
+text-align:center;
+font-weight:bold;
+}
+
+h4 {
+    color: blue;
+	font-size:20px;
+	text-decoration:underline;
+    text-shadow: 2px 2px 5px white;
+    font-weight:bold;
+}
+
+</style>
+<script>
+function bmi(){
+var weight = Number(document.getElementById("weight").value);
+var height = Number(document.getElementById("height").value);
+
+var h1=height/100;
+var result = weight/(h1*h1);
+
+document.getElementById("result").innerHTML = "Your BMI score is:  " +result;
+
+if(result<18.5)
+
+document.getElementById("bb").innerHTML = "You are underweight. You should eat:(1)5 portions of a variety of fruit. (2)Basing meals on potatoes, bread, rice, pasta or other starchy carbohydrates. ";
+
+if(result>24.5)
+document.getElementById("bb").innerHTML = "You are overweight. A healthy diet with nutrient-dense foods, include a variety of foods from all food groups, reduce calorie intake, limit saturated and trans fats, limit added sugars, and promote hydration." ;
+
+if(result<24.5 && result>18.5)
+document.getElementById("bb").innerHTML ="Your BMI is absolutely normal. Keep healthy Habits.";
+}
+
+
+</script>
+</head>
+
+<body>
+    <div style="width:600px">
+   <form >
+            <h4 align="center">BMI Calculator</h4>
+           <p> <input id="weight" type="text" placeholder="Your weight in kilograms" /></p>
+
+            <p><input id="height" type="text" placeholder="Your height in centimeters"/></p>
+
+           <input class = "submit" type="button"  value="Submit" onclick="bmi()" />
+            <p id="result">Here will be your result</p>
+            <p id="bb">Here will be your result</p>
+            <br><a href="{% url 'bmistandard' %}" style="color:black"><b><u>Standard Unit Calculator</u></b></a>
+            <center>
+<br>         <a href="http://127.0.0.1:8000/" style="color:blue"><b><u>Home</u></b></a></p>
+</center>
+</form>
+</div>
+    </body>
+</html>

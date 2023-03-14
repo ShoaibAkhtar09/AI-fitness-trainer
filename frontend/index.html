@@ -1,0 +1,211 @@
+{% load crispy_forms_tags %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <script type="text/javascript">
+    window.NREUM || (NREUM = {});
+    NREUM.info = {
+      "beacon": "bam.nr-data.net",
+      "queueTime": 1,
+      "licenseKey": "73d06b4457",
+      "agent": "",
+      "transactionName": "MVNXMUpQCkcDWhJQWwgZcxBWUhBdDVdJV1ERQ01LUF4JUUxPD1xDFQxdClVUO0QDXgM=",
+      "applicationID": "3073470",
+      "errorBeacon": "bam.nr-data.net",
+      "applicationTime": 210
+    }
+  </script>
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>FitMe</title>
+  <meta name="description" content="Start your weight loss journey today with the help of best dietitians, fitness trainers and yoga instructors. Get personalized yoga, workout, and diet plan for weight loss.">
+  <meta name="google-site-verification" content="8t1HWzE_dZQ39N8apKbCTue8dGpZFld2fUZBeaciGhM" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:title" content="FitMe Weight Loss Diet, Exercise and Yoga Coach" />
+  <meta property="og:description" content="Start your weight loss journey today with best dietitians, fitness trainers and yoga instructors. Get personalized yoga, workout, and diet plan for weight loss.">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap-social.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.min.css' %}" defer>
+  <link rel="stylesheet" href="{% static '/css/webflow.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static '/css/webflow1.css' %}" type="text/css">
+  <link rel="stylesheet" type="text/css" href="{% static '/css/swiper.min.css' %}" defer>
+  <link rel="stylesheet" type="text/css" href="{% static '/css/new.min.css' %}" defer>
+  <link rel="stylesheet" href="{% static '/css/form.css' %}" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet" defer>
+
+  <script type="text/javascript">
+    var $$leadSource = 'home-page';
+  </script>
+
+  <script>
+    ! function() {
+      function o(n, i) {
+        if (n && i)
+          for (var r in i) i.hasOwnProperty(r) && (void 0 === n[r] ? n[r] = i[r] : n[r].constructor === Object && i[r].constructor === Object ? o(n[r], i[r]) : n[r] = i[r])
+      }
+      try {
+        var n = decodeURIComponent("");
+        if (n.length > 0 && window.JSON && "function" == typeof window.JSON.parse) {
+          var i = JSON.parse(n);
+          void 0 !== window.BOOMR_config ? o(window.BOOMR_config, i) : window.BOOMR_config = i
+        }
+      } catch (r) {
+        window.console && "function" == typeof window.console.error && console.error("mPulse: Could not parse configuration", r)
+      }
+    }();
+  </script>
+  <script>
+    ! function(e) {
+      var a = "https://s.go-mpulse.net/boomerang/",
+        t = "addEventListener";
+      if ("False" == "True") e.BOOMR_config = e.BOOMR_config || {}, e.BOOMR_config.PageParams = e.BOOMR_config.PageParams || {}, e.BOOMR_config.PageParams.pci = !0, a = "https://s2.go-mpulse.net/boomerang/";
+      if (window.BOOMR_API_key = "L7QA7-M3PBN-YYEWW-23UGW-CB36M", function() {
+          function n(a) {
+            e.BOOMR_onload = a && a.timeStamp || (new Date).getTime()
+          }
+          if (!e.BOOMR || !e.BOOMR.version && !e.BOOMR.snippetExecuted) {
+            e.BOOMR = e.BOOMR || {}, e.BOOMR.snippetExecuted = !0;
+            var i, o, r, _ = document.createElement("iframe");
+            if (e[t]) e[t]("load", n, !1);
+            else if (e.attachEvent) e.attachEvent("onload", n);
+            _.src = "javascript:void(0)", _.title = "", _.role = "presentation", (_.frameElement || _).style.cssText = "width:0;height:0;border:0;display:none;", r = document.getElementsByTagName("script")[0], r.parentNode.insertBefore(_, r);
+            try {
+              o = _.contentWindow.document
+            } catch (O) {
+              i = document.domain, _.src = "javascript:var d=document.open();d.domain='" + i + "';void(0);", o = _.contentWindow.document
+            }
+            o.open()._l = function() {
+              var e = this.createElement("script");
+              if (i) this.domain = i;
+              e.id = "boomr-if-as", e.src = a + "L7QA7-M3PBN-YYEWW-23UGW-CB36M", BOOMR_lstart = (new Date).getTime(), this.body.appendChild(e)
+            }, o.write("<bo" + 'dy onload="document._l();">'), o.close()
+          }
+        }(), "".length > 0)
+        if (e && "performance" in e && e.performance && "function" == typeof e.performance.setResourceTimingBufferSize) e.performance.setResourceTimingBufferSize();
+      ! function() {
+        if (BOOMR = e.BOOMR || {}, BOOMR.plugins = BOOMR.plugins || {}, !BOOMR.plugins.AK) {
+          var a = "" == "true" ? 1 : 0,
+            t = "",
+            n = "m7cnlevusu2nexowj3qa-f-ad73f6b74-clientnsv4-s.akamaihd.net",
+            i = {
+              "ak.v": 25,
+              "ak.cp": "879630",
+              "ak.ai": parseInt("561593", 10),
+              "ak.ol": "0",
+              "ak.cr": 10,
+              "ak.ipv": 4,
+              "ak.proto": "h2",
+              "ak.rid": "83aa336",
+              "ak.r": 36364,
+              "ak.a2": a,
+              "ak.m": "a",
+              "ak.n": "essl",
+              "ak.bpcip": "103.196.213.0",
+              "ak.cport": 56915,
+              "ak.gh": "180.149.52.206",
+              "ak.quicv": "",
+              "ak.tlsv": "tls1.2",
+              "ak.0rtt": "",
+              "ak.csrc": "-",
+              "ak.acc": "",
+              "ak.t": "1574325984"
+            };
+          if ("" !== t) i["ak.ruds"] = t;
+          var o = {
+            i: !1,
+            av: function(a) {
+              var t = "http.initiator";
+              if (a && (!a[t] || "spa_hard" === a[t])) i["ak.feo"] = void 0 !== e.aFeoApplied ? 1 : 0, BOOMR.addVar(i)
+            },
+            rv: function() {
+              var e = ["ak.bpcip", "ak.cport", "ak.cr", "ak.csrc", "ak.gh", "ak.ipv", "ak.m", "ak.n", "ak.ol", "ak.proto", "ak.quicv", "ak.tlsv", "ak.0rtt", "ak.r", "ak.acc", "ak.t"];
+              BOOMR.removeVar(e)
+            }
+          };
+          BOOMR.plugins.AK = {
+            akVars: i,
+            akDNSPreFetchDomain: n,
+            init: function() {
+              if (!o.i) {
+                var e = BOOMR.subscribe;
+                e("before_beacon", o.av, null, null), e("onbeacon", o.rv, null, null), o.i = !0
+              }
+              return this
+            },
+            is_complete: function() {
+              return !0
+            }
+          }
+        }
+      }()
+    }(window);
+  </script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMWZ638" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <nav class="hme-navbar navbar-fixed-top">
+    <div class="row">
+      <div class="col-md-3 col-md-offset-1 col-sm-6 col-xs-6">
+
+      </div>
+      
+      </div>
+    </div>
+
+      <div class="side-nav-buttons--container">
+
+
+      </div>
+      <div class="nav-link--container">
+        <a href="/" id="homeNavId" class="side-nav-text" onclick="_ga('HomePage', 'Hamburger List Click', 'Home Navigation Homepage')">Home</a>
+
+        <a href="#" id="expertNavId" class="side-nav-text" ">Our Coaches</a>
+
+        <a href="{% url 'gallery' %}" class="side-nav-text">Gallery</a>
+        <!--a href=""/careers/" class="side-nav-text" onclick="_ga('HomePage', 'Hamburger List Click', 'Careers Navigation Homepage')">Careers</a>
+      <a href="https://www.FitMe.com/blog/" target="_blank" class="side-nav-text" onclick="_ga('HomePage', 'Hamburger List Click', 'Blog  Navigation Homepage')">Blog</a-->
+        <a href="{% url 'about' %}" target="_blank" class="side-nav-text">Our Team</a>
+      </div>
+  
+        <div class="">
+          <form method="post">
+            {% csrf_token %}
+            <div class="form-header"><strong class="bold-text">LOGIN</strong><br /></div>
+            {{ form }}
+            <br><br>
+            <button type="submit" class="btn btn-primary"> login </button>
+            
+          </form>
+          <br>
+          <a href="signup/">Already have an account ?
+            <input type="submit" value="Sign Up" data-wait="Please wait..." class="btn btn-primary" id="lead-gerneration-submit" />
+          </a>
+    
+         </div>
+        </div>
+
+
+
+
+        
+  <script src="{% static '/js/privacy_popup.js' %}" defer></script>
+
+  <!-- jQuery first, then Bootstrap JS, Intercom, Home js -->
+  <script src="{% static '/js/jquery.min.js' %}" defer></script>
+  <script src="{% static '/js/bootstrap.min.js' %}" defer></script>
+  <script src="{% static '/js/swiper.min.js' %}" defer></script>
+  <script src="{% static '/js/home.min.js' %}" defer></script>
+  <script src="{% static '/js/wrapper.js' %}" defer></script>
+  <!--<script src="{% static '/js/intercom.js' %}" defer></script>-->
+  <script type="text/javascript" src="{% static '/js/landing_page.js' %}" defer></script>
+</body>
+
+</html>

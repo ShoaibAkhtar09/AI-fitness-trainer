@@ -1,0 +1,116 @@
+{% extends 'base1.html' %}
+
+{% load static %}
+
+{% block head %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/main1.css' %}">
+
+{% endblock %}
+
+
+{% block body %}
+
+
+
+{% if user.trainee %}
+<!-- Small boxes (Stat box) -->
+<div class="row" onload="bmi()">
+  <div class="col-lg-3 col-md-6 col-xs-6">
+    <!-- small box -->
+    <div class="small-box bg-aqua" style="border: 1px solid black">
+      <div class="inner">
+        <h3>{{ user.trainee.current_weight }}</h3>
+        <h2>Body Weight</h2>
+      </div>
+    </div>
+  </div>
+  <!-- ./col -->
+  <div class="col-lg-3 cold-md-6 col-xs-6">
+    <!-- small box -->
+    <div class="small-box bg-green" style="border: 1px solid black">
+      <div class="inner">
+        <h3>{{ user.trainee.body_fat }}<sup style="font-size: 20px">%</sup></h3>
+        <h2>Body Fat</h2>
+      </div>
+    </div>
+  </div>
+  <!-- ./col -->
+  <div class="col-lg-3 col-md-6 col-xs-6">
+    <!-- small box -->
+    <div class="small-box bg-yellow" style="border: 1px solid black">
+      <div class="inner">
+        <h3 id="user_bmi">N/A</h3>
+        <h2>BMI</h2>
+      </div>
+    </div>
+  </div>
+  <!-- ./col -->
+  {% endif %}
+
+  <h1 style="color:blue;">AI Fitness Trainer</h1>
+  <img src={% static 'img/trainer.jpg' %} class="img-fluid" alt="Responsive image">
+  
+
+</div>
+
+
+<div class="l-content--inner">
+  <a id="main-content"></a>
+  <script>
+    var utag_data = {
+      "page_number": "1",
+      "page_category": "channel",
+      "page_title": "Workouts",
+      "page_id": "6",
+      "canonical_url": "workouts"
+    }
+  </script>
+  <script>
+    if (typeof(utag_data) !== "undefined") {
+      utag_data["referrer"] = document.referrer.replace(/^.*?:\/\//, "") || "none";
+      utag_data.utm_source = parseUrlParams("utm_source");
+      utag_data.utm_medium = parseUrlParams("utm_medium");
+      utag_data.utm_campaign = parseUrlParams("utm_campaign");
+      if (window.document.documentElement.clientWidth < 768) {
+        utag_data["site_display_format"] = "mobile";
+      } else if (window.document.documentElement.clientWidth > 1023) {
+        utag_data["site_display_format"] = "desktop";
+      } else {
+        utag_data["site_display_format"] = "tablet";
+      }
+    }
+  </script>
+  <script>
+    if (typeof(window.s) === "undefined") {
+      window.s = new Object;
+    }
+  </script>
+  <script>
+    window.onload = function() {
+      var weight = {{ user.trainee.current_weight }};
+      var height = {{ user.trainee.height }};
+
+      var h1 = height * 12;
+      var w2 = weight * 2.205;
+      var result = (w2 * 705) / h1;
+      document.getElementById("user_bmi").innerHTML = result.toPrecision(4);
+    }
+
+
+
+    (function(a, b, c, d) {
+      a = Drupal.settings.tealium.tealium_script;
+      b = document;
+      c = 'script';
+      d = b.createElement(c);
+      d.src = a;
+      d.type = 'text/java' + c;
+      d.async = true;
+      a = b.getElementsByTagName(c)[0];
+      a.parentNode.insertBefore(d, a);
+    })();
+  </script>
+
+  
+{% endblock %}

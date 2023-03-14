@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<head>
+    
+<style>
+    section .gallery-1{
+        position: absolute;
+        left:0;
+        margin: 0;
+        padding: 0;
+
+    }
+
+.gallery-1 img{
+    float: left;
+    height: 60vh;
+    width: 30vw;
+    margin: 10%;
+    padding: 10%;
+}
+</style>
+</head>
+<body style="color:black;">
+<section id="content">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="about-logo">
+                    <h3>Our <span class="color">Excercises Plans</span></h3>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<div class="container overflow-hidden text-center">
+    <div class="row gx-5">
+      <div class="col">
+        <img src="{% static 'img/download.jpeg' %}" class="card-img-top" alt="..." height="250px">
+       <div class="" style="color:black;"><a href="http://127.0.0.1:8000/over/" style="color:black;">Over-Weight</a></div>
+      </div>
+      <div class="col">
+        <img src="{% static 'img/under-images.jpeg' %}" class="card-img-top" alt="..." height="250px">
+        <div class="p-3"><a href="http://127.0.0.1:8000/under/" style="color:black;">Under-Weight</a></div>
+      </div>
+
+      <div class="col">
+        <img src="{% static 'img/images.jpeg' %}" class="card-img-top" alt="..." height="250px">
+        <div class="p-3"><a href="http://127.0.0.1:8000/normal/" style="color:black;">Normal BMI</a></div>
+      </div>
+
+
+    </div>
+  </div>
+  
+
+
+
+        <!-- /.container -->
+    </div>
+</section>
+<!--// End Gallery 1-2 -->
+</div>
+<br><br><br>
+<hr>
+</body>
+{% endblock %}
