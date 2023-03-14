@@ -57,7 +57,7 @@ def TraineeRegister(request):
     return render(request, "user/register.html", {"form": form, "tform": Tform})
 
 
-############################## TrainerRegister ###############################################
+############################## TrainerRegister #####################
 
 
 def TrainerRegister(request):
